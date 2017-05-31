@@ -139,6 +139,13 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
   float: left;
   text-align: left;
 }
+.form__icon{
+  text-align: center;
+}
+.icon--large{
+  margin-top:10px;
+  font-size: 40px
+}
 
 /**
  * card
@@ -174,28 +181,24 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
   padding: 0;
   margin: 0;
   height: auto;
-/*   position: fixed; */
 }
 .grid__row{
   width: 100%;
   padding-left: -15px;
   padding-right: -15px;
 }
-.grid__width--full{
-  width: 100%;
-}
-.grid__width--half{
-  width: 50%;
-}
-.grid__width--third{
-  width: 30%;
-  float: left;
-}
-.grid__width--two-third{
-  width: 70%;
-  float: left;
-}
-
+.grid__width--12{width: 100%;}
+.grid__width--11{width: 91.66666667%;}
+.grid__width--10{width: 83.33333333%}
+.grid__width--9{width: 75%}
+.grid__width--8{width: 66.66666667%}
+.grid__width--7{width: 58.33333333%}
+.grid__width--6{width: 50%}
+.grid__width--5{width: 41.66666667%}
+.grid__width--4{width: 33.33333333%}
+.grid__width--3{width: 25%}
+.grid__width--2{width: 16.66666667%}
+.grid__width--1{width: 8.33333333%}
 /* global modifier */
 .bg--white{
   background-color: rgb(255, 255, 255);
@@ -225,19 +228,21 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
        float: left;
        margin: 0;
      }
-     .grid__width--full{
-       width: 100%;
+     .form__icon{
+       display: none;
      }
-     .grid__width--half{
-       width: 100%;
-     }
-     .grid__width--third{
-       width: 100%;
-     }
-     .grid__width--two-third{
-       width: 100%;
-     }
-     .card>.card__body>.grid>.grid__row>.grid__width--half{
+    .grid__width--12{width: 100%}
+    .grid__width--11{width: 100%}
+    .grid__width--10{width: 100%}
+    .grid__width--9{width: 100%}
+    .grid__width--8{width: 100%}
+    .grid__width--6{width: 100%}
+    .grid__width--5{width: 100%}
+    .grid__width--4{width: 100%}
+    .grid__width--3{width: 25%}
+    .grid__width--2{width: 16.66666667%}
+    .grid__width--1{width: 8.33333333%}
+     .card>.card__body>.grid>.grid__row>.grid__width--6{
        width: 50%;
      }
      .form__submit{
