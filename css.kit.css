@@ -1,0 +1,75 @@
+/*
+  Custom CSS using BEM in class naming standard
+  v0.1
+  ---------------------------------------------
+  Taufiqur Rohman
+*/
+
+/**
+ * card
+ */
+.card{
+  width: 100%;
+  min-height: 40px;
+  box-shadow: #d0d0d0 0px 4px 7px 0px;
+  margin-bottom: 10px;
+  color: #525252;
+}
+/* card element */
+.card__header{
+  font-weight: bold;
+  padding: 10px;
+  height: 40px;
+  border-bottom: 1px solid #ececec;
+}
+.card__body{
+  padding: 10px
+}
+.card__footer{
+  padding: 10px;
+  height: 40px;
+  border-top: 1px solid #ececec;
+}
+/* card modifier */
+.card--white{
+  background: #fff;
+}
+.card--blue{
+  background:#1b8ee2;
+  color: #fff;
+}
+
+
+/**
+ * grid
+ */
+.grid{
+  padding: 0;
+  margin: 0;
+}
+.grid__row{
+  width: 100%;
+  padding-left: -15px;
+  padding-right: -15px;
+}
+.grid__width--full{
+  width: 100%;
+}
+.grid__width--half{
+  width: 50%;
+}
+.grid__width--third{
+  width: 30%;
+  float: left;
+}
+.grid__width--two-third{
+  width: 70%;
+  float: left;
+}
+
+/* custom style */
+.padding{
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
