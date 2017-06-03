@@ -56,8 +56,8 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   transition: all 0.15s ease-out 0s;
   background: #cbd1d8;
   border: none;
@@ -67,14 +67,13 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
   margin-right: 0.5rem;
   outline: none;
   position: relative;
-/*   z-index: 1000; */
   border-radius: 50%;
 }
 .input__radio:hover {
   background: #fdb714;
 }
 .input__radio:checked {
-  background: #252727;
+  background: #165686;
 }
 .radio__label{
   width: 50px !important;
@@ -148,12 +147,36 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
 }
 
 /**
+ * labels
+ */
+.label{
+  padding: 8px;
+  font-size: 13px;
+  color: #fff;
+  text-transform: capitalize;
+}
+.label--default{
+  background: grey;
+}
+.label--green{
+  background-color: green;
+}
+.label--blue{
+  background-color: blue;
+}
+.label--red{
+  background: red
+}
+.label--orange{
+  background: orange;
+}
+
+/**
  * card
  */
 .card{
   width: 100%;
   min-height: 40px;
-  box-shadow: #d0d0d0 0px 4px 7px 0px;
   margin-bottom: 10px;
   color: #525252;
   overflow:auto;
@@ -179,13 +202,19 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
  */
 .grid{
   padding: 0;
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: auto;
+  position: relative;
+  overflow: auto;
+  width: 100%;
 }
-.grid__row{
+.grid>.grid__row{
   width: 100%;
   padding-left: -15px;
   padding-right: -15px;
+  height: auto;
+  overflow: auto;
 }
 .grid__width--12{width: 100%;}
 .grid__width--11{width: 91.66666667%;}
@@ -199,6 +228,8 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
 .grid__width--3{width: 25%}
 .grid__width--2{width: 16.66666667%}
 .grid__width--1{width: 8.33333333%}
+.grid__width--custom{width: 20%}
+
 /* global modifier */
 .bg--white{
   background-color: rgb(255, 255, 255);
@@ -222,25 +253,26 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
 /**
  * responsive
  */
- @media /*(min-width: 481px) and*/ (max-width: 767px) {
-     .grid{
-       width: 100%;
+ @media (max-width: 767px) {
+    .grid{
        float: left;
        margin: 0;
-     }
-     .form__icon{
+    }
+    .form__icon{
        display: none;
-     }
+    }
+    .grid__width--custom{width: 50%}
     .grid__width--12{width: 100%}
     .grid__width--11{width: 100%}
     .grid__width--10{width: 100%}
     .grid__width--9{width: 100%}
     .grid__width--8{width: 100%}
+    .grid__width--7{width: 100%}
     .grid__width--6{width: 100%}
     .grid__width--5{width: 100%}
     .grid__width--4{width: 100%}
     .grid__width--3{width: 25%}
-    .grid__width--2{width: 16.66666667%}
+    .grid__width--2{width: 100%}
     .grid__width--1{width: 8.33333333%}
      .card>.card__body>.grid>.grid__row>.grid__width--6{
        width: 50%;
