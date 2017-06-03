@@ -98,11 +98,16 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
 .form__input{
   padding: 0;
   margin-top: 10px;
+  border: 1px solid #ccc;
+}
+.form__select-option{
+  background-color: #fff;  
 }
 .form__submit{
   padding: 5px 10px;
   border: 0;
   font-weight: bold;
+  margin-top: 10px;
 }
 .submit--large{
   padding: 10px 20px;
@@ -124,6 +129,11 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
 }
 .submit--color-yellow:hover{
   background-color: rgb(212, 154, 17);
+}
+.form--horizontal>.grid>.grid__row>.form__label{
+  height: 40px;
+  line-height: 40px;
+  margin-top: 5px;
 }
 .form__label{
   font-weight: bold;
@@ -150,8 +160,8 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
  * labels
  */
 .label{
-  padding: 8px;
-  font-size: 13px;
+  padding: 4px;
+  font-size: 11px;
   color: #fff;
   text-transform: capitalize;
 }
@@ -168,7 +178,7 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
   background: red
 }
 .label--orange{
-  background: orange;
+  background: #ffc65d;
 }
 
 /**
@@ -235,7 +245,7 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
   background-color: rgb(255, 255, 255);
 }
 .bg--grey{
-  background-color: #bbb;
+  background-color: #e4e4e4;
 }
 .bg--blue{
   background-color: #1b8ee2;
@@ -274,14 +284,51 @@ input[type=text]:focus,input[type=password]:focus, textarea:focus {
     .grid__width--3{width: 25%}
     .grid__width--2{width: 100%}
     .grid__width--1{width: 8.33333333%}
-     .card>.card__body>.grid>.grid__row>.grid__width--6{
-       width: 50%;
-     }
-     .form__submit{
-       width: 100%;
-     }
-     input[type=text],input[type=password], textarea, optgroup {
-        border: 1px solid #ccc;
-        height: 40px;
-     }
+    .card>.card__body>.grid>.grid__row>.grid__width--6{
+      width: 50%;
+    }
+    .form__submit{
+      width: 100%;
+    }
+    input[type=text],input[type=password], textarea, optgroup {
+      border: 1px solid #ccc;
+      height: 40px;
+    }
+}
+
+@media (max-width: 580px) {
+    .responsive-table{
+      display: block;
+      text-align: left !important;
+    }
+
+    #responsive-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    #responsive-table tr { border: 1px solid #ccc; }
+
+    #responsive-table td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+      text-align:left;
+    }
+
+    #responsive-table td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align:left;
+      font-weight: bold;
+    }
+
+    #responsive-table td:before { content: attr(data-title); }
 }
